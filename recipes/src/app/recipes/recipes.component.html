@@ -1,3 +1,31 @@
-<p>
-  recipes works!
-</p>
+<div class='container'>
+  <h1>Recept toevoegen</h1>
+
+  <form (ngSubmit)='onSubmit(recipe)' [formGroup]="recipe">
+        <label for='name'>Naam :</label>
+        <input type='text' formControlName="name" id='name' name='name'>
+     <br />
+        <label for='calories'>Calorieën :</label>
+        <input type='text' formControlName="calories" id='calories' name='calories'>
+     <br />
+        <label for=ingredients>Ingrediënten :</label>
+        <input type='text' formControlName="ingredients" id='ingredients'  name='ingredients'>
+     <br />
+        <label for=time>Nodige tijd :</label>
+        <input type='text' formControlName="time" id='time' name='time'>
+     <br />
+     <button type='submit' class='btn btn-success'>Add</button>
+
+     <br/><br/>
+
+
+
+  </form>
+
+  <ul>
+    <!--<li *ngFor="let recipe of recipes">{{recipes}}</li>-->
+    <li>{{recipes}}</li>
+ </ul>
+
+
+</div>
