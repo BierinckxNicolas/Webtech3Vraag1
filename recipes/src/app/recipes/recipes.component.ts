@@ -29,15 +29,12 @@ export class RecipesComponent implements OnInit {
     
     for (var key in localStorage){
       if(value.name == key) {
-        /*for (var i = 0; i < localStorage.length; i++){
-              this.recipes.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-            
-      }   */  for (var i = 0; i < localStorage.length; i++){
+       for (var i = 0; i < localStorage.length; i++){
         this.recipes = JSON.parse(localStorage.getItem(localStorage.key(i)));
             
       } }
       else {
-        localStorage.setItem(value.name, JSON.stringify({value}));
+      localStorage.setItem(value.name, JSON.stringify({value}));
       }
 
    }
@@ -45,7 +42,10 @@ export class RecipesComponent implements OnInit {
    
   }
 
-
+   /*for (var i = 0; i < localStorage.length; i++){
+              this.recipes.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+            
+      }   */
   
 }
 
